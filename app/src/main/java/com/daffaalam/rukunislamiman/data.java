@@ -13,13 +13,16 @@ public class data {
     public String getJudul() {
         return judul;
     }
+
     public void setJudul() {
         this.judul = judul;
     }
+
     public Integer getGambar() {
         return gambar;
     }
-    public  void setGambar() {
+
+    public void setGambar() {
         this.gambar = gambar;
     }
 }

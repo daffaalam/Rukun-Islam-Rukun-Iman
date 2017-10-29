@@ -39,8 +39,7 @@ public class adapter extends RecyclerView.Adapter<adapter.CustomViewHolder> {
 
                 v
                         .getContext()
-                        .startActivity(new Intent(v.getContext(), detail.class)
-                        .putExtra("JUDUL", dataArrayList.get(position).getJudul()));
+                        .startActivity(new Intent(v.getContext(), detail.class).putExtra("JUDUL", dataArrayList.get(position).getJudul()));
 
             }
         });
@@ -62,7 +61,6 @@ public class adapter extends RecyclerView.Adapter<adapter.CustomViewHolder> {
             judul = (TextView) view.findViewById(R.id.judul_cv);
             gambar = (ImageView) view.findViewById(R.id.gambar);
             cardView = (CardView) view.findViewById(R.id.card_view);
-
         }
     }
 }
