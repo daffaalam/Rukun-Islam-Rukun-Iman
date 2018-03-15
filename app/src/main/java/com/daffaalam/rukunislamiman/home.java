@@ -1,5 +1,6 @@
 package com.daffaalam.rukunislamiman;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -49,17 +50,18 @@ public class home extends AppCompatActivity {
             R.drawable.no_image
     };
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        rv_islam = (RecyclerView) findViewById(R.id.rv_islam);
+        rv_islam = findViewById(R.id.rv_islam);
         rv_islam.setHasFixedSize(true);
         rv_islam.setLayoutManager(new LinearLayoutManager(this));
         rv_islam.setAdapter(new adapter(this, dataArrayList_islam));
 
-        rv_iman = (RecyclerView) findViewById(R.id.rv_iman);
+        rv_iman = findViewById(R.id.rv_iman);
         rv_iman.setHasFixedSize(true);
         rv_iman.setLayoutManager(new LinearLayoutManager(this));
         rv_iman.setAdapter(new adapter(this, dataArrayList_iman));
@@ -72,10 +74,10 @@ public class home extends AppCompatActivity {
         }
 
         String versi = BuildConfig.VERSION_NAME;
-        TextView ver = (TextView) findViewById(R.id.ver);
+        TextView ver = findViewById(R.id.ver);
         ver.setText("App version : " + versi);
 
-        TextView about = (TextView) findViewById(R.id.about);
+        TextView about = findViewById(R.id.about);
         about.setPaintFlags(about.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         about.setOnClickListener(new View.OnClickListener() {
             @Override

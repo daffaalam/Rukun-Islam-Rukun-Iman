@@ -10,7 +10,7 @@ public class data {
         this.gambar = gambar;
     }
 
-    public String getJudul() {
+    String getJudul() {
         return judul;
     }
 
@@ -18,7 +18,7 @@ public class data {
         this.judul = judul;
     }
 
-    public Integer getGambar() {
+    Integer getGambar() {
         return gambar;
     }
 

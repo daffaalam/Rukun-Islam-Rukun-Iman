@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="80dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        tools:ignore="ContentDescription" />
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -24,6 +25,8 @@
         android:indeterminateTint="@color/colorPrimaryDark"
         android:max="100"
         android:paddingEnd="20dp"
-        android:paddingStart="20dp" />
+        android:paddingStart="20dp"
+        tools:targetApi="lollipop"
+        tools:ignore="UnusedAttribute" />
 
 </RelativeLayout>

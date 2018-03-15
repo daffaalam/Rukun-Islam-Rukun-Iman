@@ -1,5 +1,6 @@
 package com.daffaalam.rukunislamiman;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 public class adapter extends RecyclerView.Adapter<adapter.CustomViewHolder> {
     private ArrayList<data> dataArrayList;
 
-    public adapter(home home, ArrayList<data> arrayList) {
+    adapter(home home, ArrayList<data> arrayList) {
         this.dataArrayList = arrayList;
     }
 
@@ -23,13 +24,13 @@ public class adapter extends RecyclerView.Adapter<adapter.CustomViewHolder> {
         RecyclerView.LayoutParams layoutParams;
         layoutParams = new RecyclerView.LayoutParams
                 (ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item, null);
+        @SuppressLint("InflateParams") View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item, null);
         view.setLayoutParams(layoutParams);
         return new CustomViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final CustomViewHolder holder, final int position) {
+    public void onBindViewHolder(final CustomViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
         holder.judul.setText(dataArrayList.get(position).getJudul());
         holder.gambar.setImageResource(dataArrayList.get(position).getGambar());
@@ -50,17 +51,17 @@ public class adapter extends RecyclerView.Adapter<adapter.CustomViewHolder> {
         return (null != dataArrayList ? dataArrayList.size() : 0);
     }
 
-    public class CustomViewHolder extends RecyclerView.ViewHolder {
+    class CustomViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView judul;
-        public ImageView gambar;
-        public CardView cardView;
+        TextView judul;
+        ImageView gambar;
+        CardView cardView;
 
-        public CustomViewHolder(final View view) {
+        CustomViewHolder(final View view) {
             super(view);
-            judul = (TextView) view.findViewById(R.id.judul_cv);
-            gambar = (ImageView) view.findViewById(R.id.gambar);
-            cardView = (CardView) view.findViewById(R.id.card_view);
+            judul = view.findViewById(R.id.judul_cv);
+            gambar = view.findViewById(R.id.gambar);
+            cardView = view.findViewById(R.id.card_view);
         }
     }
 }

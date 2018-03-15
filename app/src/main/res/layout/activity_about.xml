@@ -20,7 +20,8 @@
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
             android:padding="5dp"
-            android:src="@drawable/logo" />
+            android:src="@drawable/logo"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,7 +46,8 @@
                 android:textColor="#ffffff"
                 android:textSize="13sp"
                 android:textStyle="italic"
-                android:typeface="serif" />
+                android:typeface="serif"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -54,14 +56,18 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:overScrollMode="never"
         android:paddingBottom="20dp"
         android:paddingEnd="20dp"
-        android:paddingStart="20dp">
+        android:paddingStart="20dp"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
 
             <WebView
                 android:id="@+id/text_about"
@@ -87,7 +93,8 @@
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,7 +113,8 @@
                         android:layout_weight="1"
                         android:text="NAME"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -114,7 +122,8 @@
                         android:layout_weight="2"
                         android:text="Abiyyu Daffa\' Alam"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -130,7 +139,8 @@
                         android:layout_weight="1"
                         android:text="BIRTH"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -138,7 +148,8 @@
                         android:layout_weight="2"
                         android:text="Purworejo, 29 Februari 2000"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -154,7 +165,8 @@
                         android:layout_weight="1"
                         android:text="GENDER"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -162,7 +174,8 @@
                         android:layout_weight="2"
                         android:text="Male"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -178,7 +191,8 @@
                         android:layout_weight="1"
                         android:text="ADDRESS"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -188,7 +202,8 @@
                         android:onClick="maps"
                         android:text="Pondok Sawah Indah, Blok C No.16, Ciputat, Tangerang Selatan, Banten, Indonesia"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -204,7 +219,8 @@
                         android:layout_weight="1"
                         android:text="HOBBY"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -212,7 +228,8 @@
                         android:layout_weight="2"
                         android:text="Dev Apps"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -228,7 +245,8 @@
                         android:layout_weight="1"
                         android:text="E-MAIL"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -239,7 +257,8 @@
                         android:onClick="send_mail"
                         android:text="smk_daffa@rbs.sch.id"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -255,7 +274,8 @@
                         android:layout_weight="1"
                         android:text="PHONE"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -266,7 +286,8 @@
                         android:onClick="call"
                         android:text="082299368783"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -282,7 +303,8 @@
                         android:layout_weight="1"
                         android:text="LINE"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -292,7 +314,8 @@
                         android:linksClickable="true"
                         android:text="line.me/ti/p/~abiyyu_daffa"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -308,7 +331,8 @@
                         android:layout_weight="1"
                         android:text="WHATSAPP"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -316,7 +340,8 @@
                         android:layout_weight="2"
                         android:text="082299368783"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -332,7 +357,8 @@
                         android:layout_weight="1"
                         android:text="INSTAGRAM"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -342,7 +368,8 @@
                         android:linksClickable="true"
                         android:text="instagram.com/daffa_alam/"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -358,7 +385,8 @@
                         android:layout_weight="1"
                         android:text="GITHUB"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -368,7 +396,8 @@
                         android:linksClickable="true"
                         android:text="github.com/daffaalam"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -384,7 +413,8 @@
                         android:layout_weight="1"
                         android:text="TELEGRAM"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -394,7 +424,8 @@
                         android:linksClickable="true"
                         android:text="telegram.me/daffaalam"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -410,7 +441,8 @@
                         android:layout_weight="1"
                         android:text="TWITTER"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -420,7 +452,8 @@
                         android:linksClickable="true"
                         android:text="twitter.com/Daffaalam"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -436,7 +469,8 @@
                         android:layout_weight="1"
                         android:text="FACEBOOK"
                         android:textAlignment="textStart"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -446,7 +480,8 @@
                         android:linksClickable="true"
                         android:text="facebook.com/abiyyu.daffaalam"
                         android:textAlignment="textEnd"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -461,7 +496,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="source : \ndalamislam.com/dasar-islam/rukun-islam\ndalamislam.com/dasar-islam/rukun-iman"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 

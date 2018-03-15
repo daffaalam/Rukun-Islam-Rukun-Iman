@@ -1,5 +1,6 @@
 package com.daffaalam.rukunislamiman;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -11,16 +12,17 @@ import android.widget.TextView;
 
 public class about extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
         String versi = BuildConfig.VERSION_NAME;
-        TextView ver = (TextView) findViewById(R.id.versi);
+        TextView ver = findViewById(R.id.versi);
         ver.setText("Version : " + versi);
 
-        WebView tx_about = (WebView) findViewById(R.id.text_about);
+        WebView tx_about = findViewById(R.id.text_about);
         tx_about.setBackgroundColor(Color.TRANSPARENT);
         tx_about.loadUrl("file:///android_asset/about.html");
 
@@ -28,7 +30,7 @@ public class about extends AppCompatActivity {
 
     public void send_mail(View view) {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "smk_daffa@rbs.sch.id", null));
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback Rukun Islam dan Iman");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback" + R.string.app_name);
         startActivity(Intent.createChooser(emailIntent, "Feedback"));
     }
 
